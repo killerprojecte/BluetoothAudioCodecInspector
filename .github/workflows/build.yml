@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '6.0.x' # 使用实际存在的最新版本
 
@@ -28,7 +28,7 @@ jobs:
       # 如果你的目标是 Linux 或 macOS，可以将 `--runtime win-x64` 更改为如 `linux-x64` 或 `osx-x64`
 
     - name: Upload Build Artifact
-      uses: actions/upload-artifact@v3 # 更新为 v3 版本
+      uses: actions/upload-artifact@v5 # 更新为 v3 版本
       with:
         name: published-application
         path: ./published-app

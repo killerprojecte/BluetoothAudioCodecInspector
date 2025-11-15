@@ -5,6 +5,7 @@ on:
     branches: [ master ] # 或者你使用的默认分支名称
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
